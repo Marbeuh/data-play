@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title> COXO | Application</title>
+
+      <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+      <link rel="manifest" href="assets/favicon/site.webmanifest">
+      <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="theme-color" content="#ffffff">
+
+      <meta property="og:image" content="http://www.arnaud-marbehant.be/projets/dataplay/assets/images/avant.jpg" />
+      <meta property="og:type" content="article" />
+      <meta property="og:description" content="Envie d’un cocktail spécifique ? Viens essayer notre carte intéractive sur les bars de Namur. Tu trouveras ton bonheur !" />
+      <meta property="og:locale" content="fr_FR" />
+      <meta property="og:title" content="Coxo l'application des cocktails" /> 
+  
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="Coxo">
+      <meta name="twitter:creator" content="Arnaud Marbehant">
+      <meta name="twitter:title" content="Coxo l'application des cocktails">
+      <meta name="twitter:description" content="Envie d’un cocktail spécifique ? Viens essayer notre carte intéractive sur les bars de Namur. Tu trouveras ton bonheur !">
+      <meta name="twitter:image" content="http://www.arnaud-marbehant.be/projets/dataplay/assets/images/avant.jpg">
+
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;500;700;800;900&family=Cormorant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+      
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <link href="assets/css/main.css" rel="stylesheet">
+      <script defer src="assets/js/main.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   </head>
+
+   <body>
+
+      <header class="section section--header">
+         <a class="logo" href="index.html">Coxo</a>
+      </header>
+
+      <main>
+         
+         <div class=" section section--app">
+            <h2 class="title title--small title--marg">Découvrez les meilleurs cocktails de Namur</h2>
+         </div>
+
+         <section class="section section--lists">
+            <h3 class="title title--h3">Choississez votre cocktail</h3>
+
+            <form>
+               <input id="mojito" type="radio" name="cocktails">
+               <label for="mojito">Mojito</label>
+
+               <input id="daikiry" type="radio" name="cocktails">
+               <label for="daikiry">Daikiry</label>
+
+               <input id="beach" type="radio" name="cocktails">
+               <label for="beach">Sex on the beach</label>
+
+               <input id="gin" type="radio" name="cocktails">
+               <label for="gin">Gin Tonic</label>
+
+               <input id="pina" type="radio" name="cocktails">
+               <label for="pina">Pina Colada</label>
+
+               <input id="long" type="radio" name="cocktails">
+               <label for="long">Long Island Iced Tea</label>
+
+               <input id="margarita" type="radio" name="cocktails">
+               <label for="margarita">Margarita</label>
+
+               <input id="bloody" type="radio" name="cocktails">
+               <label for="bloody">Bloody Mary</label>
+
+               <input id="piscine" type="radio" name="cocktails">
+               <label for="piscine">Piscine</label>
+
+               <input id="cuba" type="radio" name="cocktails">
+               <label for="cuba">Cuba Libre</label>
+
+               <input id="mai" type="radio" name="cocktails">
+               <label for="mai">Maï-Taï</label>
+
+               <input id="b52" type="radio" name="cocktails">
+               <label for="b52">B52</label>
+
+               <input id="tequila" type="radio" name="cocktails">
+               <label for="tequila">Téquila Sunrise</label>
+
+               <input id="cosmopolitan" type="radio" name="cocktails">
+               <label for="cosmopolitan">Cosmopolitan</label>
+
+            </form>
+         </section>
+
+         <section class="section section--legende">
+            <h3 class="title title--h3">Endroit ou le cocktail est disponible</h3>
+
+            <div class="test">
+               <div class="solid">
+                  <p class="#">1-3 bars</p>
+               </div>
+
+               <div class="solid solid--second">
+                  <p class="#">3-5 bars</p>
+               </div>
+
+               <div class="solid solid--three">
+                  <p class="#">5 bars et +</p>
+               </div>
+            </div>
+         </section>
+
+         <div class="section section--map">
+            <svg class="carte" width="1581" height="742" viewBox="0 0 1581 742" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <mask id="path-1-inside-1" fill="white">
+               <path d="M239 114L220 122.5L322 201L470 333L708.5 431L714 380.5L731.5 317L738.5 215.5L731.5 190.5V141L704.5 104.5L642 81L617.5 50.5L239 114Z"/>
+               <path d="M331 219.5L206 127.5L0 282L104 422L258.5 637L415 706.5L429 700.5L436 689V560.5V528L440 408.5V388L450 333L331 219.5Z"/>
+               <path d="M450 398L461.5 341.5L679.5 434L760.5 453L909.5 561L992.5 589L1024.5 621L1041 610.5L1078 691L1073.5 698.5H1030.5L1016 722.5H1005.5L895 706.5L797 719.5L733 735L704 739L661.5 742L633 739L574 732.5L445.5 689V486L450 398Z"/>
+               <path d="M648 76L627 49L664.5 32L738.5 19.5L929 0L1037.5 19.5L1097 41.5L1016 193.5L864 146.5L751.5 117L648 76Z"/>
+               <path d="M746.5 319.5L718.5 431L763.5 444.5L825 484.5L896 418L1082 243.5L1017.5 203.5L751.5 128L738.5 136L743.5 186.5L750 217L746.5 319.5Z"/>
+               <path d="M1089.5 248L833 490L914 552L999 581L1024.5 604.5L1044 594L1050 604.5L1088 687.5L1120.5 698.5L1166.5 694L1197.5 674L1234.5 638.5L1295.5 569L1267 516L1229 452.5L1213 424.5L1164.5 352L1089.5 248Z"/>
+               <path d="M1027 197L1108.5 45L1232.5 94.5L1089.5 234.5L1027 197Z"/>
+               <path d="M1242.5 99.5L1099 241L1177.5 352L1223.5 424.5L1281.5 521.5L1315 557L1413.5 499.5L1544 437L1570.5 412.5L1580.5 344.5L1560 300.5L1499.5 253L1242.5 99.5Z"/>
+               </mask>
+               <path class="zone2" d="M239 114L220 122.5L322 201L470 333L708.5 431L714 380.5L731.5 317L738.5 215.5L731.5 190.5V141L704.5 104.5L642 81L617.5 50.5L239 114Z" fill="#FCEEEE"/>
+               <path class="zone1" d="M331 219.5L206 127.5L0 282L104 422L258.5 637L415 706.5L429 700.5L436 689V560.5V528L440 408.5V388L450 333L331 219.5Z" fill="#FCEEEE"/>
+               <path class="zone3" d="M450 398L461.5 341.5L679.5 434L760.5 453L909.5 561L992.5 589L1024.5 621L1041 610.5L1078 691L1073.5 698.5H1030.5L1016 722.5H1005.5L895 706.5L797 719.5L733 735L704 739L661.5 742L633 739L574 732.5L445.5 689V486L450 398Z" fill="#FCEEEE"/>
+               <path class="zone4" d="M648 76L627 49L664.5 32L738.5 19.5L929 0L1037.5 19.5L1097 41.5L1016 193.5L864 146.5L751.5 117L648 76Z" fill="#FCEEEE"/>
+               <path class="zone5" d="M746.5 319.5L718.5 431L763.5 444.5L825 484.5L896 418L1082 243.5L1017.5 203.5L751.5 128L738.5 136L743.5 186.5L750 217L746.5 319.5Z" fill="#FCEEEE"/>
+               <path class="zone6" d="M1089.5 248L833 490L914 552L999 581L1024.5 604.5L1044 594L1050 604.5L1088 687.5L1120.5 698.5L1166.5 694L1197.5 674L1234.5 638.5L1295.5 569L1267 516L1229 452.5L1213 424.5L1164.5 352L1089.5 248Z" fill="#FCEEEE"/>
+               <path class="zone7" d="M1027 197L1108.5 45L1232.5 94.5L1089.5 234.5L1027 197Z" fill="#FCEEEE"/>
+               <path class="zone8" d="M1242.5 99.5L1099 241L1177.5 352L1223.5 424.5L1281.5 521.5L1315 557L1413.5 499.5L1544 437L1570.5 412.5L1580.5 344.5L1560 300.5L1499.5 253L1242.5 99.5Z" fill="#FCEEEE"/>
+               <path d="M239 114L220 122.5L322 201L470 333L708.5 431L714 380.5L731.5 317L738.5 215.5L731.5 190.5V141L704.5 104.5L642 81L617.5 50.5L239 114Z" stroke="#570F0F" stroke-width="4" mask="url(#path-1-inside-1)"/>
+               <path d="M331 219.5L206 127.5L0 282L104 422L258.5 637L415 706.5L429 700.5L436 689V560.5V528L440 408.5V388L450 333L331 219.5Z" stroke="#570F0F" stroke-width="4" mask="url(#path-1-inside-1)"/>
+               <path d="M450 398L461.5 341.5L679.5 434L760.5 453L909.5 561L992.5 589L1024.5 621L1041 610.5L1078 691L1073.5 698.5H1030.5L1016 722.5H1005.5L895 706.5L797 719.5L733 735L704 739L661.5 742L633 739L574 732.5L445.5 689V486L450 398Z" stroke="#570F0F" stroke-width="4" mask="url(#path-1-inside-1)"/>
+               <path d="M648 76L627 49L664.5 32L738.5 19.5L929 0L1037.5 19.5L1097 41.5L1016 193.5L864 146.5L751.5 117L648 76Z" stroke="#570F0F" stroke-width="4" mask="url(#path-1-inside-1)"/>
+               <path d="M746.5 319.5L718.5 431L763.5 444.5L825 484.5L896 418L1082 243.5L1017.5 203.5L751.5 128L738.5 136L743.5 186.5L750 217L746.5 319.5Z" stroke="#570F0F" stroke-width="4" mask="url(#path-1-inside-1)"/>
+               <path d="M1089.5 248L833 490L914 552L999 581L1024.5 604.5L1044 594L1050 604.5L1088 687.5L1120.5 698.5L1166.5 694L1197.5 674L1234.5 638.5L1295.5 569L1267 516L1229 452.5L1213 424.5L1164.5 352L1089.5 248Z" stroke="#570F0F" stroke-width="4" mask="url(#path-1-inside-1)"/>
+               <path d="M1027 197L1108.5 45L1232.5 94.5L1089.5 234.5L1027 197Z" stroke="#570F0F" stroke-width="4" mask="url(#path-1-inside-1)"/>
+               <path d="M1242.5 99.5L1099 241L1177.5 352L1223.5 424.5L1281.5 521.5L1315 557L1413.5 499.5L1544 437L1570.5 412.5L1580.5 344.5L1560 300.5L1499.5 253L1242.5 99.5Z" stroke="#570F0F" stroke-width="4" mask="url(#path-1-inside-1)"/>
+            </svg>
+         </div>
+
+         <section class="section section--price">
+            <h3 class="title title--h3" id="title_price">Comparatif des prix</h3>
+            <div class="chart--hide" id="chart"></div>
+            <div class="chart--hide" id="chart1"></div>
+            <div class="chart--hide" id="chart2"></div>
+            <div class="chart--hide" id="chart3"></div>
+            <div class="chart--hide" id="chart4"></div>
+            <div class="chart--hide" id="chart5"></div>
+            <div class="chart--hide" id="chart6"></div>
+            <div class="chart--hide" id="chart7"></div>
+            <div class="chart--hide" id="chart8"></div>
+            <div class="chart--hide" id="chart9"></div>
+            <div class="chart--hide" id="chart10"></div>
+            <div class="chart--hide" id="chart11"></div>
+            <div class="chart--hide" id="chart12"></div>
+            <div class="chart--hide" id="chart13"></div>
+         </section>
+
+      </main>
+
+      <footer class="section section--footer">
+         <div class="container container--footer">
+            <div>
+               <a class="logo" href="index.html">Coxo</a>
+               <a class="link link--dwm" href="http://dwm.re/" target="_blank"></a>
+               <h3 class="title title--data">Dataplay @ 2021</h3>
+            </div>
+            <div class="bloc bloc--link">
+               <ul class="list--footer">
+                  <li class="footer__el"><a href="http://www.arnaud-marbehant.be/" target="_blank">Arnaud Marbehant</a></li>
+                  <li class="footer__el"><a href="http://www.alexandre-huet.be/" target="_blank">Alexandre Huet</a></li>
+                  <li class="footer__el"><a href="http://www.alexandra-eischen.be/" target="_blank">Alexandra Eischen</a></li>
+               </ul>
+            </div>
+         </div>
+      </footer>
+      
+   </body>
+</html>
